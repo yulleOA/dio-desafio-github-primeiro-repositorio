@@ -1,0 +1,112 @@
+dir - lista diretórios
+cd - change directory - navega entre as pastas 
+	cd / - lista a base do diretorio C
+cd Window - acessa a pasta Windows
+cd .. - retorna um nível de diretório
+cls - clear screen 
+mkdir nome da pasta - criar diretório 
+
+echo hello > hello.txt - cria um arquivo dentro do diretorio
+dell-é um comando que deleta apenas arquivos daquele diretório, não deleta o diretório
+
+rmdir worspace /S /Q - remove o diretório wospace com as duas flags /S /Q
+
+openssl sha1
+
+
+blobs
+trees
+commits
+3 objetos do git responsável pelo versionamento do nosso código
+
+echo 'conteudo' | git hash-object --stdin
+
+
+Blob (objeto)(contém metadados do git)
+vai ter o tipo do objeto, o tamanho do arquivo (string) e \0 conteudo do arquivo
+
+Trees (objeto)(armazena Blob)(tbm contém metadados)(guarda nome do arquivo)
+\0
+blob sa4d8s texto.txt
+
+Commit
+tree s4a5sq1
+parente a98acq1
+autor yulle
+mensagem "inicia"
+-timestamp
+
+
+
+kirio@DESKTOP-DNU0JDE MINGW64 ~
+$ ssh-keygen -t ed25519 -C yulle.araujo@gmail.com
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/kirio/.ssh/id_ed25519):
+Created directory '/c/Users/kirio/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/kirio/.ssh/id_ed25519
+Your public key has been saved in /c/Users/kirio/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:IyiLQiK5Ojfvopp/A2Q18/ajtK+Cue1YCBrqd/84qmI yulle.araujo@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|    +            |
+|   . +           |
+| .o  .o          |
+|*+. ....S        |
+|*=.+  ..o.       |
+|* o+.. o .       |
+|=E*=+.o..        |
+|B**XB++=+.       |
++----[SHA256]-----+
+
+
+git init - iniciar repositório
+git add - mover arquivos e versionar
+git commit - criar commit
+
+ls -a (flag -a lista pasta/arquivos ocultos)
+
+
+kirio@DESKTOP-DNU0JDE MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global user.email "yulle.araujo@gmail.com"
+
+kirio@DESKTOP-DNU0JDE MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global user.name Yulle
+
+git init - cria repositório 
+
+kirio@DESKTOP-DNU0JDE MINGW64 /c/workspace/livro-receitas (master)
+$ mv berinjela.md.txt ./receitas/
+(movi o arquivo berijela para a pasta receitas)
+
+kirio@DESKTOP-DNU0JDE MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "cria pasta receitas, move aqruivo para receitas"
+[master (root-commit) 08a7c21] cria pasta receitas, move aqruivo para receitas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 receitas/berinjela.md.txt
+
+$ echo > README.md
+
+
+git add * -> pega tudo que está untracked e passa para tracked
+
+$ git commit -m "adiciona index"
+
+$ git config --global --unset user.name
+reconfigurar name e email
+
+$ git remote add origin https://github.com/yulleOA/livro-receitas.git
+adiciona origem para subir repositorio remoto no GitHub
+
+git remote -v
+lista os repositórios remotos cadastrados
+
+$ git push origin master
+
+
+git clone *inserir endereço do respositorio no GitHub*
+beneficio de fazer assim e não baixar a pasta: já vem como um repositório para a maquina
+
